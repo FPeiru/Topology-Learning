@@ -8,6 +8,12 @@ import gudhi as gd
 import math
 from multiprocessing import Pool
 
+import sys
+import os
+
+
+dataset_path = '00DATASET'
+
 def split_image(image_path, output_folder, tile_size=(256, 256)):
     # 打开大图
     img = Image.open(image_path)
@@ -47,8 +53,8 @@ def split_images_in_folder(input_folder, output_folder, tile_size=(20, 20)):
             split_image(image_path, output_folder, tile_size)
 
 # 示例使用
-image_path = "00DATASET/NBTwithLabel"  # 大图路径
-output_folder = "00DATASET/mini"         # 保存小图的文件夹
+image_path = os.path.join(dataset_path, 'NBTwithLabel')  # 大图路径
+output_folder = os.path.join(dataset_path, 'mini')         # 保存小图的文件夹
 split_images_in_folder(image_path, output_folder, tile_size=(50,50))
 
 from PIL import Image
@@ -94,8 +100,8 @@ def reduce_resolution_in_folder(input_folder, output_folder, scale_factor=0.5):
         reduce_image_resolution(input_path, output_path, scale_factor)
 
 # 示例使用
-input_folder = "00DATASET/test"   # 输入文件夹路径
-output_folder = "00DATASET/test05" # 输出文件夹路径
+input_folder = os.path.join(dataset_path, 'test')   # 输入文件夹路径
+output_folder = os.path.join(dataset_path, 'test05')  # 输出文件夹路径
 reduce_resolution_in_folder(input_folder, output_folder, scale_factor=0.7)
 
 
@@ -147,7 +153,7 @@ def process_tif_images(image_folder):
     return all_point_clouds
 
 # 设置TIF图像的文件夹路径
-image_folder = "00DATASET/test05"  
+image_folder = os.path.join(dataset_path, 'test05')  
 # 替换为你的TIF数据集文件夹路径
 
 # 处理TIF数据集并添加标签
