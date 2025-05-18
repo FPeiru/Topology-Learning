@@ -5,7 +5,7 @@ a = Analysis(
     ['NBT.py'],
     pathex=[],
     binaries=[],
-    datas=[('00DATASET/NBTwithLabel', '00DATASET')],
+    datas=[],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

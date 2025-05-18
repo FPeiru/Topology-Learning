@@ -21,7 +21,7 @@ missing module named _frozen_importlib_external - imported by importlib._bootstr
 excluded module named _frozen_importlib - imported by importlib (optional), importlib.abc (optional), zipimport (top-level)
 missing module named pep517 - imported by importlib.metadata (delayed)
 missing module named winreg - imported by importlib._bootstrap_external (conditional), platform (delayed, optional), mimetypes (optional), numpy.distutils.cpuinfo (delayed, optional), urllib.request (delayed, conditional, optional), matplotlib.font_manager (delayed), matplotlib (delayed, conditional), platformdirs.windows (delayed, optional), distutils._msvccompiler (top-level), setuptools.msvc (conditional), setuptools._distutils.compilers.C.msvc (top-level)
-missing module named nt - imported by shutil (conditional), importlib._bootstrap_external (conditional), ntpath (optional), os (delayed, conditional, optional), ctypes (delayed, conditional)
+missing module named nt - imported by os (delayed, conditional, optional), ntpath (optional), shutil (conditional), importlib._bootstrap_external (conditional), ctypes (delayed, conditional)
 missing module named 'org.python' - imported by copy (optional), xml.sax (delayed, conditional)
 missing module named _scproxy - imported by urllib.request (conditional)
 missing module named 'java.lang' - imported by platform (delayed, optional), xml.sax._exceptions (conditional)
