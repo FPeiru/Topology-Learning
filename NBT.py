@@ -1,6 +1,3 @@
-import sys
-sys.path.insert(0, './deps')
-
 import os
 import numpy as np
 import matplotlib.pyplot as plt
